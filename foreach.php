@@ -2,22 +2,12 @@
 
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
-foreach ($things as $stuff) {
-	if (is_integer($stuff)) {
-        echo "{$stuff} is an integer\n";
-    } elseif (is_float($stuff)) {
-        echo "{$stuff} is a floating point number\n";
-    } elseif (is_bool($stuff)) {
-    	echo "{$stuff} is a boolean\n";
-    } elseif (is_array($stuff)) {
-    	echo "This is an array\n";
-    } elseif (is_null($stuff)) {
-    	echo "{$stuff} has null value\n";
-    } elseif (is_string($stuff)) {
-    	echo "{$stuff} is a string\n";
-    };
+foreach ($things as $value) {
+       if(is_array($value)) {
+       	echo implode(', ', $value) . PHP_EOL;
+       } else {
+       		echo $value .PHP_EOL;
+       }
 }
-
-
-
 ?>
+
