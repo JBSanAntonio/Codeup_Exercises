@@ -3,18 +3,8 @@
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
 foreach ($things as $stuff) {
-	if (is_integer($stuff)) {
-        echo "{$stuff} is an integer\n";
-    } elseif (is_float($stuff)) {
-        echo "{$stuff} is a floating point number\n";
-    } elseif (is_bool($stuff)) {
-    	echo "{$stuff} is a boolean\n";
-    } elseif (is_array($stuff)) {
-    	echo "{$stuff} is an array\n";
-    } elseif (is_null($stuff)) {
-    	echo "{$stuff} has null value\n";
-    } elseif (is_string($stuff)) {
-    	echo "{$stuff} is a string\n";
+	if (is_scalar($stuff)) {
+        echo "{$stuff} is a scalar\n";
     };
 }
 
