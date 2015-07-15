@@ -2,30 +2,50 @@
 
 function add($a, $b)
 {
-    return $a + $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a + $b;
+    } else {
+        return "ERROR: $a and $b must be numbers\n";
+    }
 }
 
 function subtract($a, $b)
 {
-    // Add code here
-    return $a - $b;
+	if (is_numeric($a) && is_numeric($b)) {
+        return $a - $b;
+    } else {
+        return "ERROR: $a and $b must be numbers\n";
+    }
 }
 
 function multiply($a, $b)
 {
-    // Add code here
-    return $a * $b;
+    if (is_numeric($a) && is_numeric($b)) {
+    	return $a * $b;
+    } else {
+    	return "ERROR: $a and $b must be numbers\n";
+    }
 }
 
-function divide($a, $b)
+function divide($a, $b, $strict = true)
 {
-    // Add code here
-    return $a / $b;
+    if ($b == 0) {
+    	return "ERROR: $b must not equal zero";
+	    } elseif 
+	   		(is_numeric($a) && is_numeric($b)) {	
+	    		return $a / $b;
+		    } else {
+		    	return "ERROR: $a and $b must be numbers\n";
+	   		}
 }
 
 function modulus($a, $b)
 {
-	return $a % $b;
+	if (is_numeric($a) && is_numeric($b)) {
+    	return $a % $b;
+    } else {
+    	return "ERROR: $a and $b must be numbers\n";
+    }
 }
 
 // Add code to test your functions here
@@ -38,7 +58,7 @@ function modulus($a, $b)
 	$number = multiply(10, 5);
 	echo $number . PHP_EOL;
 
-	$number = divide(10, 5);
+	$number = divide(10, 0, true);
 	echo $number . PHP_EOL;
 
 	$number = modulus(10, 5);
