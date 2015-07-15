@@ -1,51 +1,43 @@
 <?php
+function numericCheck ($a, $b) {
+	if (!is_numeric($a) || !is_numeric($b)) {
+		return "ERROR: Both $a and $b must be numbers\n";
+	} else {
+	}
+}
 
 function add($a, $b)
 {
-    if (is_numeric($a) && is_numeric($b)) {
-        return $a + $b;
-    } else {
-        return "ERROR: $a and $b must be numbers\n";
-    }
+	numericCheck($a, $b);
+    return $a + $b;
 }
 
 function subtract($a, $b)
 {
-	if (is_numeric($a) && is_numeric($b)) {
-        return $a - $b;
-    } else {
-        return "ERROR: $a and $b must be numbers\n";
-    }
+	numericCheck($a, $b);
+    return $a - $b;
 }
 
 function multiply($a, $b)
 {
-    if (is_numeric($a) && is_numeric($b)) {
-    	return $a * $b;
-    } else {
-    	return "ERROR: $a and $b must be numbers\n";
-    }
+	numericCheck($a, $b);
+	return $a * $b;
 }
 
 function divide($a, $b, $strict = true)
 {
     if ($b == 0) {
     	return "ERROR: $b must not equal zero";
-	    } elseif 
-	   		(is_numeric($a) && is_numeric($b)) {	
-	    		return $a / $b;
-		    } else {
-		    	return "ERROR: $a and $b must be numbers\n";
-	   		}
+	    } else {	
+			numericCheck($a, $b);
+				return $a / $b;
+	    } 
 }
 
 function modulus($a, $b)
 {
-	if (is_numeric($a) && is_numeric($b)) {
-    	return $a % $b;
-    } else {
-    	return "ERROR: $a and $b must be numbers\n";
-    }
+	numericCheck($a, $b);
+	return $a % $b;
 }
 
 // Add code to test your functions here
