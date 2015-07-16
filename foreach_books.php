@@ -24,10 +24,13 @@ $books = array(
 );
 
     foreach ($books as $title => $bookDetails) {
-            echo $title . PHP_EOL;        
-            foreach ($bookDetails as $detail => $value) {
+        if ($bookDetails['published'] > 1950) {
+            echo $title . PHP_EOL; 
+        };
+        foreach ($bookDetails as $detail => $value) {
+            if ($bookDetails['published'] > 1950) {
             echo ucfirst($detail) . ': ' . $value . PHP_EOL;
-            }   
-    };
-
+            };   
+        };
+    }
 ?>
