@@ -19,18 +19,17 @@ function logMessage($logLevel, $message)
 logMessage("ERROR", "This is an error message.");
 logMessage("INFO", "This is an info message.");
 
-function logInfo(){
-	$message = "Info message without info.";
-	logMessage("INFO", $message);
+function logInfo($message)
+{
+	return logMessage('INFO', $message);
 }
 
-logInfo();
-
-function logError(){
-	$message = "Computer problem.";
-	logMessage("ERROR", $message);
+function logError($message)
+{
+	return logMessage('ERROR', $message);
 }
-logError();
+logInfo("This is an info message without info.");
+logError(404);
 
 ?>
 
