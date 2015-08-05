@@ -11,14 +11,16 @@ class Rectangle
         $this->widthValue = $width;
         $this->heightValue = $height;
     }
+
+    public function perimeter()
+	{
+	 	return $perimeter = (2 * $this->height) + (2 * $this->width);
+	}
+
     public function area()
     {
         return $area = ($this->widthValue * $this->heightValue);
     }
 }
-/*Test your new class by creating an instance of 
-Rectangle with various heights and widths. */
-$rectangle = new Rectangle('4', '8');
-/*$rectangle = new Rectangle('6', '12');*/
 
 ?>
