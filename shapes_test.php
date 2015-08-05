@@ -8,10 +8,10 @@ Rectangle with various heights and widths. */
 $rectangle1 = new Rectangle(4, 8);
 /*Calling the area method should correctly 
 display the product of height and width.*/
-echo $rectangle1->area();
+echo "Area of rectangle1 is: " . $rectangle1->area() . PHP_EOL;
 
 $rectangle2 = new Rectangle(6, 12);
-echo $rectangle2->area();
+echo "Area of rectangle2 is: " . $rectangle2->area() . PHP_EOL;
 
 
 /*Test your new Square class by creating an 
@@ -23,10 +23,10 @@ perimeter() should display the perimeter of
 the square.
 */
 
-$square1 = new Square(4, 4);
-echo $square1->area();
+$square1 = new Square(2);
+echo "Area of square1 is: " . $square1->area() . PHP_EOL;
 
-$square2 = new Square(2, 2);
-echo $square2->perimeter();
+$square2 = new Square(2);
+echo "Perimeter of square2 is: " . $square2->perimeter();
 
 ?>
