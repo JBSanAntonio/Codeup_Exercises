@@ -24,4 +24,9 @@ class Model
     }
 }
 
+$model = new Model;
+$model->test = 'appearance';
+
+echo $model->test;
+
 ?>
